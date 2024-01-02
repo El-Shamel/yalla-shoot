@@ -15,11 +15,12 @@ let StingMoalek = document.querySelector(".StingMoalek")
 let StingDawry = document.querySelector(".StingDawry")
 let Link = document.querySelector(".Link")
 
-let finalCode = document.querySelector("#finalCode")
+let finalCodeTeam = document.querySelector("#finalCodeTeam")
+let finalCodeMobarah2 = document.querySelector("#finalCodeMobarah2")
 
 let Code = 0;
 
-function MakeCodeText() {
+function MakeCodeTeam() {
     fareq1Value = fareq1.value
     asm1Value = asm1.value
     fareq2Value = fareq2.value
@@ -81,7 +82,7 @@ function MakeCodeText() {
         </div>
 
         <!-- اسم الفريق الثاني  -->
-        <div class="team-name">${asm1Value}</div>
+        <div class="team-name">${asm2Value}</div>
     </div>
     <div class="match-info">
         <ul>
@@ -101,16 +102,58 @@ function MakeCodeText() {
 `
 console.log(datetimeSValue)
 
-finalCode.value = Code
+finalCodeMobarah2.value = Code
+}
+
+
+function MakeCodeMobarah() {
+    fareq1Value = fareq1.value
+    asm1Value = asm1.value
+    fareq2Value = fareq2.value
+    asm2Value = asm2.value
+    
+    datetimeSValue = datetimeS.value
+    datetimeEValue = datetimeE.value
+    StingChannelValue = StingChannel.value
+    StingMoalekValue = StingMoalek.value
+    StingDawryValue = StingDawry.value
+    LinkValue = Link.value
+
+
+     Code = ` 
+     
+
+     <div class="coMatch">
+     <div class="backMatch">
+       <div class="baMatch">
+         <div class="colmd">
+           <div class="teamlogo" style="background-image: url(${fareq1Value});"></div>
+           <div class="teamname">${asm1Value}</div>
+         </div>
+         <div class="colmd ce"><div class="matchvs">VS</div></div>
+         <div class="colmd">
+           <div class="teamlogo" style="background-image: url(${fareq2Value});"></div>
+           <div class="teamname">${asm2Value}<br></div>
+         </div>
+       </div>
+     </div>
+   </div>
+
+
+`
+console.log(datetimeSValue)
+
+finalCodeTeam.value = Code
+
 }
 
 
 
 // copy Function 
-function copyTextareaValue() {
+function copyCodeTeam() {
 
-  if(finalCode.value != ""){
-    var textToCopy = finalCode.value
+  if(finalCodeTeam.value != ""){
+    var textToCopy = finalCodeTeam.value
 
     var tempTextarea = document.createElement('textarea');
     tempTextarea.value = textToCopy;
@@ -123,6 +166,28 @@ function copyTextareaValue() {
 
     document.body.removeChild(tempTextarea);
 
-         alert('تم نسخ الكود بنجاح!');
+         alert('تم نسخ  بطاقة الفريقين !');
   }
     }
+
+
+
+    function copyCodeMobarah() {
+
+        if(finalCodeMobarah2.value != ""){
+          var textToCopy = finalCodeMobarah2.value
+      
+          var tempTextarea = document.createElement('textarea');
+          tempTextarea.value = textToCopy;
+      
+          document.body.appendChild(tempTextarea);
+      
+      
+          tempTextarea.select();
+          document.execCommand('copy');
+      
+          document.body.removeChild(tempTextarea);
+      
+               alert('تم نسخ كود المباراة !');
+        }
+          }

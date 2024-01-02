@@ -17,9 +17,10 @@
             border-radius: 10px;
             cursor: pointer;
             position: relative;
-            top: -50px;
+            top: -60px;
             left: -5px;
             z-index: 10;
+            width: fit-content;
         }
         .separator img {
             width: 100%;
@@ -2305,18 +2306,20 @@
 
                                                 <div class="Awyeeq">
 
-                                                    <div class="Get"><button class="GetCode">توليد كود المباراة</button>
+                                                    <div class="Get"><button onclick="MakeCodeTeam()" class="GetCode">توليد كود المباراة</button>
                                                     </div>
 
                                                     <div class="GETS">
                                                         <div class="StingJew">
-                                                            <button onclick="MakeCodeText()" class="Get">توليد بطاقة الفريقين</button>
+                                                            <button onclick="MakeCodeMobarah()" class="Get">توليد بطاقة الفريقين</button>
                                                         </div>
                                                     </div>
                                                 </div>
 
-                                                <textarea id="finalCode" class="Code"></textarea>
-                                                <span onclick="copyTextareaValue()" class="btnCopy">نسخ الكود</span>
+                                                <textarea id="finalCodeTeam" class="Code"></textarea>
+                                                <div onclick="copyCodeTeam()" class="btnCopy">نسخ بطاقة الفريقين</div>
+                                                <textarea id="finalCodeMobarah2" class="Code"></textarea>
+                                                <div onclick="copyCodeMobarah()" class="btnCopy">نسخ كود المباراة</div>
 
                                             </div>
 
