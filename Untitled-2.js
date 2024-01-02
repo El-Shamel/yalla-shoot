@@ -1,5 +1,7 @@
 
 
+let Natejaa = document.querySelector(".Natejaa")
+
 
 let fareq1 = document.querySelector(".fareq1")
 let asm1 = document.querySelector(".asm1")
@@ -65,7 +67,7 @@ function MakeCodeTeam() {
             <div id="match-time" style="display: none;">${timeMobarah}</div>
 
             <!-- سكور المباراة -->
-            <div id="result">0 - 0</div>
+            <div id="result">${Natejaa}</div>
 
             <!-- حالة المبارة -->
             <div class="date end" data-start="${datetimeSValue}" data-gameends="${datetimeEValue}">
@@ -191,3 +193,95 @@ function copyCodeTeam() {
                alert('تم نسخ كود المباراة !');
         }
           }
+
+
+
+       
+let MInput = document.querySelector(".M")
+let NInput = document.querySelector(".N")
+let PInput = document.querySelector(".P")
+let QInput = document.querySelector(".Q")
+let RInput = document.querySelector(".R")
+let SInput = document.querySelector(".S")
+let TInput = document.querySelector(".S")
+let VInput = document.querySelector(".S")
+let Code2 = document.querySelector(".Code2")
+
+
+function MakeCodeInfo() {
+    MInputValue = MInput.value
+    NInputValue = NInput.value
+    PInputValue = PInput.value
+    QInputValue = QInput.value
+    RInputValue = RInput.value
+    SInputValue = SInput.value
+    TInputValue = TInput.value
+    VInputValue = VInput.value
+ 
+
+
+     Code = ` 
+     
+     <table class="table table-bordered">
+     <tbody>
+         <tr>
+             <th>البطولة</th>
+             <td>${MInputValue}</td>
+         </tr>
+         <tr>
+             <th>الجولة</th>
+             <td>${NInputValue}</td>
+         </tr>
+         <tr>
+             <th>موعد المباراة</th>
+             <td>${TInputValue}</td>
+         </tr>
+         <tr>
+             <th>توقيت المباراة</th>
+             <td>${PInputValue}</td>
+         </tr>
+         <tr>
+             <th>القناة الناقله</th>
+             <td>${QInputValue}</td>
+         </tr>
+         <tr>
+             <th>معلق المباره</th>
+             <td>${RInputValue}</td>
+         </tr>
+         <tr>
+             <th>ملعب المباراة</th>
+             <td style="text-align: justify;">${SInputValue}</td>
+         </tr>
+         <tr>
+             <th>نتيجة المباراة</th>
+             <td>${VInputValue}</td>
+         </tr>
+     </tbody>
+ </table>
+
+`
+
+Code2.value = Code
+
+}
+
+
+function copyCodeInfo() {
+
+    if(Code2.value != ""){
+      var textToCopy = Code2.value
+  
+      var tempTextarea = document.createElement('textarea');
+      tempTextarea.value = textToCopy;
+  
+      document.body.appendChild(tempTextarea);
+  
+  
+      tempTextarea.select();
+      document.execCommand('copy');
+  
+      document.body.removeChild(tempTextarea);
+  
+           alert('تم نسخ جدول معلومات المباراة !');
+    }
+      }
