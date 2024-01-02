@@ -67,7 +67,7 @@ function MakeCodeTeam() {
             <div id="match-time" style="display: none;">${timeMobarah}</div>
 
             <!-- سكور المباراة -->
-            <div id="result">${Natejaa}</div>
+            <div id="result">${Natejaa.value}</div>
 
             <!-- حالة المبارة -->
             <div class="date end" data-start="${datetimeSValue}" data-gameends="${datetimeEValue}">
@@ -203,8 +203,8 @@ let PInput = document.querySelector(".P")
 let QInput = document.querySelector(".Q")
 let RInput = document.querySelector(".R")
 let SInput = document.querySelector(".S")
-let TInput = document.querySelector(".S")
-let VInput = document.querySelector(".S")
+let TInput = document.querySelector(".T")
+let VInput = document.querySelector(".V")
 let Code2 = document.querySelector(".Code2")
 
 
