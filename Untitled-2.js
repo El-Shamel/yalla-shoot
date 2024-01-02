@@ -64,7 +64,7 @@ function MakeCodeTeam() {
         <div class="match-timing">
 
             <!-- موعد المباراة -->
-            <div id="match-time" style="display: none;">${timeMobarah}</div>
+            <div id="match-time">${timeMobarah}</div>
 
             <!-- سكور المباراة -->
             <div id="result">${Natejaa.value}</div>
