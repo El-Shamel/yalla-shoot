@@ -1,6 +1,7 @@
 
 
 let Natejaa = document.querySelector(".Natejaa")
+let Location1 = document.querySelector("#Location")
 
 
 let fareq1 = document.querySelector(".fareq1")
@@ -64,13 +65,13 @@ function MakeCodeTeam() {
         <div class="match-timing">
 
             <!-- موعد المباراة -->
-            <div id="match-time">${timeMobarah}</div>
+            <div id="match-time"></div>
 
             <!-- سكور المباراة -->
-            <div id="result">${Natejaa.value}</div>
+            <div id="result">0-0</div>
 
             <!-- حالة المبارة -->
-            <div class="date end" data-start="${datetimeSValue}" data-gameends="${datetimeEValue}">
+            <div class="date end" data-start="${datetimeSValue}+${Location1.value}" data-gameends="${datetimeEValue}+${Location1.value}">
                 انتهت المباراة</div>
         </div>
     </div>
